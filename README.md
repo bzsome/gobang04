@@ -1,7 +1,7 @@
 # gobang04
 五子棋社区，前后端分离
 
-前后端完全分离，SSM框架，CORS跨域访问，SSO单点登录，Bootstrap界面，RESTful构架风格，Netty即时通信。
+前后端完全分离，SSM框架，CORS跨域访问，SSO单点登录，Bootstrap界面，RESTful构架风格，Netty即时通信，Token口令授权。
 
 ### 开发管理工具：
   IDEA, Maven, GitHub, Hbuilder
