@@ -1,0 +1,15 @@
+.box {
+    margin: 32px auto;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+.instr {
+    margin-top: 20px;
+}
+
+.my-center {
+    margin: 0 auto;
+}

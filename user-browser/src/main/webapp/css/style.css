@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+#my-container {
+    /*保证footer是相对于container位置绝对定位*/
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    /*设置padding-bottom值大于等于footer的height值，以保证main的内容能够全部显示出来而不被footer遮盖；*/
+    padding-bottom: 100px;
+    box-sizing: border-box;
+}
+
+/* 底部 */
+
+#footer {
+    width: 100%;
+    height: 70px;
+    /* footer的高度一定要是固定值*/
+    position: absolute;
+    /*  因为border-top，因此bottom需要设置成1px*/
+    bottom: 1px;
+
+    z-index: 100;
+    padding: 10px 0px;
+    line-height: 20px;
+    color: #A9AFB7;
+    border-top: 1px solid #CCCCCC;
+    text-align: center;
+}
+
+#footer a {
+    color: #737C8C;
+}
+
+#footer a:hover {
+    color: #333333;
+    text-decoration: underline;
+}
+
+.about-user {
+    line-height: 50px;
+    font-size: 18px;
+}

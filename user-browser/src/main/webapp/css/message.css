@@ -1,0 +1,32 @@
+body {
+	background: #E2E2E2;
+	font-size: 13.5px;
+}
+
+#message_div {
+	background: #5170ad;
+	width: 400px;
+	min-height: 300px;
+	border: 1px solid #ccc;
+	color: #fff;
+	overflow-y: auto;
+	float: left;
+}
+
+ul,
+li {
+	list-style-type: square;
+}
+
+#send_div {
+	float: left;
+}
+
+table tr td {
+	font-size: 12px;
+}
+
+input,
+textarea {
+	font-size: 12px;
+}

@@ -1,0 +1,12 @@
+#user-table {
+	margin: auto;
+	max-width: 500px;
+	margin-top: 32px;
+	margin-bottom: 20px;
+}
+#user-table td{
+	height: 60px;
+}
+#user-table .first{
+	width: 120px;
+}

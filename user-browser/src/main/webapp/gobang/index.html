@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <title>在线五子棋-即时聊天</title>
+    <link rel="stylesheet" href="css/gobang.css"/>
+    <link rel="stylesheet" href="css/message.css"/>
+    <script type="text/javascript" src="static/jquery-1.9.1.min.js"></script>
+
+    <style>
+        body {
+            width: 1024px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="box_gobang">
+    <canvas id="chess" width="456px" height="456px"></canvas>
+</div>
+
+<div class="box_message">
+    <div><a href="../download.html">下载客户端</a> | <a href="../download.html">返回首页</a></div>
+    <div id="message_div">
+        <ul></ul>
+    </div>
+    <div id="send_div">
+        <table>
+            <tr>
+                <td align="right">接收用户:</td>
+                <td><input id="username" type="text" style="width: 300px;"/></td>
+            </tr>
+            <tr>
+                <td align="right">消息内容:</td>
+                <td><textarea id="msg_txt" style="width: 300px;"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <button class="btn_send" onclick="send()">发送消息</button>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</div>
+</body>
+
+<script type="text/javascript" src="../js/config/config.js"></script>
+<script type="text/javascript" src="../js/tool/cookie.js"></script>
+<script type="text/javascript" src="static/sockjs.min.js"></script>
+<script type="text/javascript" src="js/message.js"></script>
+<script type="text/javascript" src="js/gobang.js"></script>
+</html>

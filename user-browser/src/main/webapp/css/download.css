@@ -1,0 +1,23 @@
+.box {
+    margin: 32px 10px;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+.box-down {
+    margin: 30px 0px;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+#code table {
+    margin-top: 20px;
+    margin: auto;
+}
+
+.instr {
+    margin-top: 20px;
+}

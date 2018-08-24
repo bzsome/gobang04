@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Goang社区-用户注册</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/register.css">
+
+</head>
+
+<body>
+<div id="my-container">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <!-- 动态显示模态框div，用于显示提示信息等-->
+            <div id="myModal-div"></div>
+            <div class="navbar-header">
+                <!--移动端显示按钮-->
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#example-navbar-collapse">
+                    <span>菜单</span>
+                </button>
+                <a class="navbar-brand" href="#">五子棋社区</a>
+            </div>
+
+            <!--移动端隐藏，点击按钮显示-->
+            <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index.html">首页</a>
+                    </li>
+                    <li class="active">
+                        <a href="userCenter.html">用户中心</a>
+                    </li>
+                    <li>
+                        <a href="gobang/index.html">在线游戏</a>
+                    </li>
+                    <li>
+                        <a href="download.html">客户端下载</a>
+                    </li>
+                </ul>
+                <div class="dropdown about-user navbar-right text-center">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <div id="navbar-login">
+                            <a class="navbar-link" href="login.html">登录</a> /
+                            <a class="navbar-link" href="register.html">注册</a>
+                        </div>
+                        <div id="navbar-user" class="dropdown-toggle" data-toggle="dropdown" style="display: none"
+                             title="用户中心">
+                            用户：
+                            <a class="user-bar" class="navbar-link" href="userCenter.html">用户名</a>
+                            <span class="caret"></span>
+                        </div>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="clearfix">
+                            <a href="userCenter.html">用户中心</a>
+                        </li>
+
+                        <li class="divider"></li>
+                        <li class="loginOut">
+                            <a href="#">注销</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+            <form id="regFrom">
+                <div class="form-group has-feedback">
+                    <label for="username">用户名</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                        <input id="username" name="username" class="form-control" placeholder="请输入用户名" maxlength="20"
+                               type="text">
+                    </div>
+
+                    <span style="color:red;display: none;" class="tips"></span>
+                    <span style="display: none;" class=" glyphicon glyphicon-remove form-control-feedback"></span>
+                    <span style="display: none;" class="glyphicon glyphicon-ok form-control-feedback"></span>
+                </div>
+
+                <div class="form-group has-feedback">
+                    <label for="password">密码</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                        <input id="password" name="password" class="form-control" placeholder="请输入密码" maxlength="20"
+                               type="password">
+                    </div>
+
+                    <span style="color:red;display: none;" class="tips"></span>
+                    <span style="display: none;" class="glyphicon glyphicon-remove form-control-feedback"></span>
+                    <span style="display: none;" class="glyphicon glyphicon-ok form-control-feedback"></span>
+                </div>
+
+                <div class="form-group has-feedback">
+                    <label for="passwordConfirm">确认密码</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                        <input id="passwordConfirm" class="form-control" placeholder="请再次输入密码" maxlength="20"
+                               type="password">
+                    </div>
+                    <span style="color:red;display: none;" class="tips"></span>
+                    <span style="display: none;" class="glyphicon glyphicon-remove form-control-feedback"></span>
+                    <span style="display: none;" class="glyphicon glyphicon-ok form-control-feedback"></span>
+                </div>
+
+                <div class="form-group">
+                    <input class="form-control btn btn-primary" id="submit"
+                           value="立&nbsp;&nbsp;即&nbsp;&nbsp;注&nbsp;&nbsp;册" type="submit">
+                </div>
+            </form>
+        </div>
+
+        <!-- 模态框（Modal） -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
+                        </button>
+                        <h4 class="modal-title" id="title">
+                            模态框（Modal）标题
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <!--模态框内容-->
+                        <span id="content"></span>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                            关闭
+                        </button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+    </div>
+
+    <div id="footer">
+        <div class="inline-block copyright">
+            <p>
+                <a href="http://www.bzchao.com">关于我们</a> |
+                <a href="#">微博</a>
+            </p>
+            <p> Copyright © 2018 Gobang社区</p>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/config/config.js"></script>
+<script type="text/javascript" src="js/tool/cookie.js"></script>
+<script type="text/javascript" src="js/config/config.ajax.js"></script>
+<script type="text/javascript" src="js/modal/myModal.html.js"></script>
+<script type="text/javascript" src="js/tool/my.tool.js"></script>
+<script type="text/javascript" src="js/user.register.js"></script>
+
+</body>
+
+</html>

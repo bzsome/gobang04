@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gobang社区-下载中心</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/download.css">
+
+</head>
+
+<body>
+<div id="my-container">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <!-- 动态显示模态框div，用于显示提示信息等-->
+            <div id="myModal-div"></div>
+            <div class="navbar-header">
+                <!--移动端显示按钮-->
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#example-navbar-collapse">
+                    <span>菜单</span>
+                </button>
+                <a class="navbar-brand" href="#">五子棋社区</a>
+            </div>
+
+            <!--移动端隐藏，点击按钮显示-->
+            <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index.html">首页</a>
+                    </li>
+                    <li>
+                        <a href="userCenter.html">用户中心</a>
+                    </li>
+                    <li>
+                        <a href="gobang/index.html">在线游戏</a>
+                    </li>
+                    <li class="active">
+                        <a href="download.html">客户端下载</a>
+                    </li>
+                </ul>
+                <div class="dropdown about-user navbar-right text-center">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <div id="navbar-login">
+                            <a class="navbar-link" href="login.html">登录</a> /
+                            <a class="navbar-link" href="register.html">注册</a>
+                        </div>
+                        <div id="navbar-user" class="dropdown-toggle" data-toggle="dropdown" style="display: none"
+                             title="用户中心">
+                            用户：
+                            <a class="user-bar" class="navbar-link" href="userCenter.html">用户名</a>
+                            <span class="caret"></span>
+                        </div>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="clearfix">
+                            <a href="userCenter.html">用户中心</a>
+                        </li>
+
+                        <li class="divider"></li>
+                        <li class="loginOut">
+                            <a href="#">注销</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row box">
+            <div class="col-sm-6 col-xs-12">
+                <div class="instr">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">五子棋游戏</h3>
+                        </div>
+                        <div class="panel-body">
+                            <p>在线对战，人机对战</p>
+                            <p>聊天室，创建房间</p>
+                            <p>用户登录保存用户数据</p>
+                        </div>
+                    </div>
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">安装说明</h3>
+                        </div>
+                        <div class="panel-body">
+                            <p>客户端基于Java开发</p>
+                            <p>安装游戏请安装JDK</p>
+                            <p>JDK版本要求1.8以上</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+                <div class="box-down">
+                    <p class="text-center">扫描二维码下载</p>
+                    <div id="code" class="center-block"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row box">
+            <div class="col-sm-6 col-xs-12">
+                <div class="instr">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">下载安装</h3>
+                        </div>
+                        <div class="panel-body">
+                            <p>扫描右方二维码下载</p>
+                            <p>或点击此处：
+                                <a id="downLink">下载客户端</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+                <div class="instr">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">JDK运行环境安装</h3>
+                        </div>
+                        <div class="panel-body">
+                            <p>使用前请先安装运行环境</p>
+                            <p>请点击此处：
+                                <a id="downJDK">下载JDK运行环境</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="inline-block">
+            <p>
+                <a href="http://www.bzchao.com">关于我们</a> |
+                <a href="#">微博</a>
+            </p>
+            <p> Copyright © 2018 Gobang社区</p>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/jquery/jquery.qrcode.min.js"></script>
+<script type="text/javascript" src="js/tool/cookie.js"></script>
+<script type="text/javascript" src="js/config/config.js"></script>
+<script type="text/javascript" src="js/config/config.ajax.js"></script>
+<script type="text/javascript" src="js/modal/myModal.html.js"></script>
+<script type="text/javascript" src="js/tool/my.tool.js"></script>
+<script type="text/javascript" src="js/user.get.js"></script>
+<script type="text/javascript" src="js/download.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+.form-login {
+    max-width: 330px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+.form-login .checkbox {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.form-login .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-login input[type="text"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.login-box {
+    max-width: 400px;
+    margin: 32px auto 20px auto;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+    padding-bottom: 20px;
+}
+
+.login-box .loginbox-title {
+    background: #FFFFFF;
+    height: 70px;
+    border-radius: 3px 3px 0 0;
+}
+
+.login-box .loginbox-title h4 {
+    color: #666666;
+    padding: 0 20px;
+    line-height: 50px;
+    font-size: 18px;
+    border-bottom: 1px solid #F2F2F2;
+}
+
+.find-div,
+.reg-div {
+    height: 20px;
+    margin: 20px 32px;
+    display: inline;
+}
+
+.clear:after {
+    content: ".";
+    height: 0;
+    visibility: hidden;
+    display: block;
+    clear: both;
+}

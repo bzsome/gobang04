@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gobang社区-用户中心</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/user.center.css">
+
+</head>
+
+<body>
+<div id="my-container">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <!-- 动态显示模态框div，用于显示提示信息等-->
+            <div id="myModal-div"></div>
+            <div class="navbar-header">
+                <!--移动端显示按钮-->
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#example-navbar-collapse">
+                    <span>菜单</span>
+                </button>
+                <a class="navbar-brand" href="#">五子棋社区</a>
+            </div>
+
+            <!--移动端隐藏，点击按钮显示-->
+            <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index.html">首页</a>
+                    </li>
+                    <li class="active">
+                        <a href="userCenter.html">用户中心</a>
+                    </li>
+                    <li>
+                        <a href="gobang/index.html">在线游戏</a>
+                    </li>
+                    <li>
+                        <a href="download.html">客户端下载</a>
+                    </li>
+                </ul>
+                <div class="dropdown about-user navbar-right text-center">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <div id="navbar-login">
+                            <a class="navbar-link" href="login.html">登录</a> /
+                            <a class="navbar-link" href="register.html">注册</a>
+                        </div>
+                        <div id="navbar-user" class="dropdown-toggle" data-toggle="dropdown" style="display: none"
+                             title="用户中心">
+                            用户：
+                            <a class="user-bar" class="navbar-link" href="userCenter.html">用户名</a>
+                            <span class="caret"></span>
+                        </div>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="clearfix">
+                            <a href="userCenter.html">用户中心</a>
+                        </li>
+
+                        <li class="divider"></li>
+                        <li class="loginOut">
+                            <a href="#">注销</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <table class="table table-hover table-bordered" id="user-table">
+            <caption><span>用户中心</span>
+                <span class="pull-right">
+                    <a class="btn btn-default loginOut" href="#">注销登录</a>
+                    <a class="btn btn-default" href="userAlter.html">修改信息</a>
+                </span>
+            </caption>
+            <tbody>
+            <tr>
+                <td class="first">用户名</td>
+                <td id="username"></td>
+            </tr>
+            <tr>
+                <td>电话号码</td>
+                <td id="phoneNum"></td>
+            </tr>
+            <tr>
+                <td>邮箱</td>
+                <td id="email"></td>
+            </tr>
+            <tr>
+                <td>签名</td>
+                <td id="sign"></td>
+            </tr>
+            <tr>
+                <td>注册时间</td>
+                <td id="reg_time"></td>
+            </tr>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="footer">
+        <div class="inline-block copyright">
+            <p>
+                <a href="http://www.bzchao.com">关于我们</a> |
+                <a href="#">微博</a>
+            </p>
+            <p> Copyright © 2018 Gobang社区</p>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/tool/cookie.js"></script>
+<script type="text/javascript" src="js/config/config.js"></script>
+<script type="text/javascript" src="js/config/config.ajax.js"></script>
+<script type="text/javascript" src="js/modal/myModal.html.js"></script>
+<script type="text/javascript" src="js/tool/my.tool.js"></script>
+<script type="text/javascript" src="js/user.get.js"></script>
+<script type="text/javascript" src="js/user.center.js"></script>
+</body>
+
+</html>
