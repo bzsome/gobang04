@@ -11,13 +11,22 @@
 
 ### 部署方式：
    SSO单点登录系统(server-oauth):打包成war，直接部署在Servlet容器中即可
+   
+          此模块依赖数据库，需要修改数据配置文件，dbconfig.properties
+          
    Netty即时通信服务(server-netty):打包成jar，执行执行jar即可。
-        websocket端口默认为9901，ClientChat端口默认为9902。如需修改端口，请修改NetttServer.java中相关代码。
-        Netty登录基于单点登录系统，请在本模块Constants.java中修改单点登录系统API接口地址。
+   
+          websocket端口默认为9901，ClientChat端口默认为9902。如需修改端口，请修改NetttServer.java中相关代码。
+          Netty登录基于单点登录系统，请在本模块Constants.java中修改单点登录系统API接口地址。
+          
    Web用户界面(user-browser):可直接将webapp压缩，发布在静态WEB服务器中，或打包成war，发布在Servlet服务器中。
-        WEB登录基于单点登录系统，请在js/config.js中修改单点登录系统API接口地址。
+   
+          WEB登录基于单点登录系统，请在js/config.js中修改单点登录系统API接口地址。
+          
    客户端用户界面(user-client):打包成jar(maven)，执行执行jar即可。
-        客户端登录基于单点登录系统，请在本模块Constants.java中修改单点登录系统API接口地址。
+   
+          客户端登录基于单点登录系统，请在本模块Constants.java中修改单点登录系统API接口地址。
+   
    
 网页端和客户端通过SSO单点登录系统进行身份验证，用户之间的通信采用Netty即使通信框架，且网页端可与客户端相互通信。
 在线预览http://gobang04.bzchao.com
