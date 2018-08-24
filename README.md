@@ -12,12 +12,11 @@ Web用户界面 + 客户端用户界面
 **本项目将在2018.09构架升级(已完成升级部署)
 在线预览http://gobang04.bzchao.com
 
-
-<img src="https://img-blog.csdn.net/20160406210559795" width="300" alt="我是缩小后的图"></img>
-
-
 本次升级，更新授权认证方式(SSO)，实现各平台用户的通信(Netty+WebSocket+Okhttp)
 
+<img src="https://github.com/bzsome/gobang04/blob/master/doc/browser-message.png?raw=true" width="500"></img>
+<img src="https://github.com/bzsome/gobang04/blob/master/doc/client.png?raw=true" width="500"></img>
 
->>>>![WEB端截图](https://github.com/bzsome/gobang04/blob/master/doc/browser-message.png?raw=true)
->>>>![客户端截图](https://github.com/bzsome/gobang04/blob/master/doc/client.png?raw=true)
+
+
+>>>>![客户端截图]()
