@@ -13,6 +13,9 @@ Web用户界面 + 客户端用户界面
 在线预览http://gobang04.bzchao.com
 
 
+<img src="https://img-blog.csdn.net/20160406210559795" width="300" alt="我是缩小后的图"></img>
+
+
 本次升级，更新授权认证方式(SSO)，实现各平台用户的通信(Netty+WebSocket+Okhttp)
 
 
