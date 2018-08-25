@@ -10,6 +10,7 @@
   
 ### 四大模块(独立部署)：
   SSO单点登录系统 + Netty即时通信服务 + Web用户界面 + 客户端用户界面
+#### 客户端模块在单独的一个项目中，[在线五子棋V02](https://github.com/bzsome/GobangClient02)
 
 ### 部署方式：
    SSO单点登录系统(server-oauth):打包成war，直接部署在Servlet容器中即可
