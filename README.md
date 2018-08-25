@@ -1,6 +1,8 @@
 # gobang04
 五子棋社区，前后端分离
 
+        此版本基于上一版本：Gobang v02 https://github.com/bzsome/Gobang02
+        
 前后端完全分离，SSM框架，CORS跨域访问，SSO单点登录，Bootstrap界面，RESTful构架风格，Netty即时通信，Token口令授权。
 
 ### 开发管理工具：
