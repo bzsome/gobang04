@@ -4,10 +4,10 @@
  */
 
 //服务器api接口地址
-var oauth_path = "http://localhost:8080/oauth";
+var oauth_path = "http://gobang04.bzchao.com/oauth";
 var netty_path = "gobang04.bzchao.com:9901/ws";
 _settings = {
-    gobangDown: "http://t.cn/RrXswvP",
+    gobangDown: "http://t.cn/RkEOmDD",
     jdkDown: "http://down-www.newasp.net/pcdown/soft/yh/jre1.8x64.7z",
     api: {
         user: oauth_path + "/user/user",//用户操作接口(CRUD)
