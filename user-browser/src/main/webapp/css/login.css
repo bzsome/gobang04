@@ -29,8 +29,8 @@
     max-width: 400px;
     margin: 32px auto 20px auto;
     border: 1px solid #CCCCCC;
+    padding: 20px 20px;
     border-radius: 3px;
-    padding-bottom: 20px;
 }
 
 .login-box .loginbox-title {
@@ -47,10 +47,8 @@
     border-bottom: 1px solid #F2F2F2;
 }
 
-.find-div,
-.reg-div {
+.reg-div, .find-div {
     height: 20px;
-    margin: 20px 32px;
     display: inline;
 }
 
