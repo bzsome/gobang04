@@ -26,7 +26,7 @@
    
           WEB登录基于单点登录系统，请在js/config.js中修改单点登录系统API接口地址。
           
-   客户端用户界面(user-client):打包成jar(maven)，执行执行jar即可。
+   客户端用户界面(user-client):打包成jar(maven)，执行执行jar即可。[客户端模块](https://github.com/bzsome/GobangClient02)
    
           客户端登录基于单点登录系统，请在本模块Constants.java中修改单点登录系统API接口地址。
    
