@@ -1,12 +1,10 @@
 # gobang04 五子棋社区
-前后端完全分离，SSM框架，CORS跨域访问，SSO单点登录，Bootstrap界面，RESTful构架风格，Netty即时通信，Token口令授权。
 
 在线预览http://gobang04.bzchao.com
 
 此版本基于上一版本：Gobang v03 https://github.com/bzsome/Gobang03
-        
-#### 客户端模块在单独的一个项目中，[在线五子棋V02](https://github.com/bzsome/GobangClient02)
 
+前后端完全分离，SSM框架，CORS跨域访问，SSO单点登录，Bootstrap界面，RESTful构架风格，Netty即时通信，Token口令授权。
 
 ### 构建说明
         项目采用IDEA集成开发工具，Maven项目构建工具，使用Git版本控制，JUnit单元测试工具，Log4j日志记录等。Gson序列化工具，Okhttp网络请求工具。
