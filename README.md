@@ -26,8 +26,7 @@
 **4.客户端用户界面(user-client)：**
 - 通过Okhttp3与登录系统交互，使用Netty进行即时通信。
 - 用户可以在客户端端进行登录，启动软件能够自动登录。与其他在线用户进行五子棋游戏，在线聊天等。
-
-##### 客户端模块在单独的一个项目中，[在线五子棋V02](https://github.com/bzsome/GobangClient02)
+- 客户端模块在单独的一个项目中，[在线五子棋V02](https://github.com/bzsome/GobangClient02)
 
 ### 项目构架图
 <img src="https://github.com/bzsome/gobang04/blob/master/doc/gobang构架图.png?raw=true" width="500"></img>
@@ -35,8 +34,6 @@
 <img src="https://github.com/bzsome/gobang04/blob/master/doc/用户登陆时序图.png?raw=true" width="500"></img>
 ### 即时通讯时序图
 <img src="https://github.com/bzsome/gobang04/blob/master/doc/即时通讯时序图.png?raw=true" width="500"></img>
-
 ### 项目预览
 <img src="https://github.com/bzsome/gobang04/blob/master/doc/browser-message.png?raw=true" width="500"></img>
-
 <img src="https://github.com/bzsome/gobang04/blob/master/doc/client.png?raw=true" width="500"></img>
