@@ -37,6 +37,6 @@
 <img src="https://github.com/bzsome/gobang04/blob/master/doc/用户登陆时序图.png?raw=true" width="500"></img>
 ### 即时通讯时序图
 <img src="https://github.com/bzsome/gobang04/blob/master/doc/即时通讯时序图.png?raw=true" width="500"></img>
-### 项目预览
+### 运行效果截图
 <img src="https://github.com/bzsome/gobang04/blob/master/doc/browser-message.png?raw=true" width="500"></img>
 <img src="https://github.com/bzsome/gobang04/blob/master/doc/client.png?raw=true" width="500"></img>
