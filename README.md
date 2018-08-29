@@ -35,10 +35,11 @@
 在线预览http://gobang04.bzchao.com
 
 本次升级，更新授权认证方式(SSO)，实现各平台用户的通信(Netty+WebSocket+Okhttp)
-### 项目构架
-
+### 项目构架图
 <img src="https://github.com/bzsome/gobang04/blob/master/doc/gobang构架图.png?raw=true" width="500"></img>
+### 用户登陆时序图
 <img src="https://github.com/bzsome/gobang04/blob/master/doc/用户登陆时序图.png?raw=true" width="500"></img>
+### 即时通讯时序图
 <img src="https://github.com/bzsome/gobang04/blob/master/doc/即时通讯时序图.png?raw=true" width="500"></img>
 
 ### 项目预览
