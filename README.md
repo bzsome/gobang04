@@ -1,40 +1,32 @@
-# gobang04
-五子棋社区，前后端分离
-
-        此版本基于上一版本：Gobang v03 https://github.com/bzsome/Gobang03
-        
+# gobang04 五子棋社区
 前后端完全分离，SSM框架，CORS跨域访问，SSO单点登录，Bootstrap界面，RESTful构架风格，Netty即时通信，Token口令授权。
 
-### 开发管理工具：
-  IDEA, Maven, GitHub, Hbuilder
-  
-### 四大模块(独立部署)：
-  SSO单点登录系统 + Netty即时通信服务 + Web用户界面 + 客户端用户界面
-#### 客户端模块在单独的一个项目中，[在线五子棋V02](https://github.com/bzsome/GobangClient02)
-
-### 部署方式：
-   SSO单点登录系统(server-oauth):打包成war，直接部署在Servlet容器中即可
-   
-          此模块依赖数据库，需要修改数据配置文件，dbconfig.properties
-          
-   Netty即时通信服务(server-netty):打包成jar，执行执行jar即可。
-   
-          websocket端口默认为9901，ClientChat端口默认为9902。如需修改端口，请修改NetttServer.java中相关代码。
-          Netty登录基于单点登录系统，请在本模块Constants.java中修改单点登录系统API接口地址。
-          
-   Web用户界面(user-browser):可直接将webapp压缩，发布在静态WEB服务器中，或打包成war，发布在Servlet服务器中。
-   
-          WEB登录基于单点登录系统，请在js/config.js中修改单点登录系统API接口地址。
-          
-   客户端用户界面(user-client):打包成jar(maven)，执行执行jar即可。[客户端模块](https://github.com/bzsome/GobangClient02)
-   
-          客户端登录基于单点登录系统，请在本模块Constants.java中修改单点登录系统API接口地址。
-   
-   
-网页端和客户端通过SSO单点登录系统进行身份验证，用户之间的通信采用Netty即使通信框架，且网页端可与客户端相互通信。
 在线预览http://gobang04.bzchao.com
 
-本次升级，更新授权认证方式(SSO)，实现各平台用户的通信(Netty+WebSocket+Okhttp)
+此版本基于上一版本：Gobang v03 https://github.com/bzsome/Gobang03
+        
+#### 客户端模块在单独的一个项目中，[在线五子棋V02](https://github.com/bzsome/GobangClient02)
+
+
+### 构建说明
+        项目采用IDEA集成开发工具，Maven项目构建工具，使用Git版本控制，JUnit单元测试工具，Log4j日志记录等。Gson序列化工具，Okhttp网络请求工具。
+### 项目简介
+        用户可在客户端和Web端，进行游戏对战，以及即时聊天。且客户端与Web端之间能够即时通信。
+        用户端能够保存用户信息，以便下次自动登录。用户如需注册需打开Web端的注册页面。
+## 项目模块
+#### SSO单点登录系统(server-oauth)：
+        采用SSM框架，MyBatis逆向工程，RESTful构架风格生成通用API接口。
+        使用JWT生成token口令授权。
+#### Netty即时通信服务(server-netty)：
+        处理用户之间的即时消息,包括聊天信息，下棋对战信息。且客户端和WEB可相互通信。同时会与单点登录系统进行交互，判断用户时候有相应权限。
+#### Web用户界面(user-browser)：
+        纯静态页面：HTML，CSS，jQuery, Ajax, BootStrap。
+        用户可以在WEB端进行登录注册，修改资料。与其他在线用户进行五子棋游戏，在线聊天等。
+#### 客户端用户界面(user-client)：
+        通过Okhttp3与登录系统交互，使用Netty进行即时通信。
+        用户可以在客户端端进行登录，启动软件能够自动登录。与其他在线用户进行五子棋游戏，在线聊天等。
+##### 客户端模块在单独的一个项目中，[在线五子棋V02](https://github.com/bzsome/GobangClient02)
+
 ### 项目构架图
 <img src="https://github.com/bzsome/gobang04/blob/master/doc/gobang构架图.png?raw=true" width="500"></img>
 ### 用户登陆时序图
