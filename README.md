@@ -15,14 +15,18 @@
 **1. SSO单点登录系统(server-oauth)：**
 - 采用SSM框架，MyBatis逆向工程，RESTful构架风格生成通用API接口。
 - 使用JWT生成token口令授权。
+
 **2. Netty即时通信服务(server-netty)：**
 - 处理用户之间的即时消息,包括聊天信息，下棋对战信息。且客户端和WEB可相互通信。同时会与单点登录系统进行交互，判断用户时候有相应权限。
+
 **3. Web用户界面(user-browser)：**
 - 纯静态页面：HTML，CSS，jQuery, Ajax, BootStrap。
 - 用户可以在WEB端进行登录注册，修改资料。与其他在线用户进行五子棋游戏，在线聊天等。
+
 **4.客户端用户界面(user-client)：**
 - 通过Okhttp3与登录系统交互，使用Netty进行即时通信。
 - 用户可以在客户端端进行登录，启动软件能够自动登录。与其他在线用户进行五子棋游戏，在线聊天等。
+
 ##### 客户端模块在单独的一个项目中，[在线五子棋V02](https://github.com/bzsome/GobangClient02)
 
 ### 项目构架图
