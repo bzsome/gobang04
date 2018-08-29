@@ -4,6 +4,8 @@
 
 此版本基于上一版本：[Gobang v03](https://github.com/bzsome/Gobang03)
 
+此软件完全独立设计开发，本人拥有所有版权。
+
 ### 关键技术
 前后端完全分离，SSM框架，CORS跨域访问，SSO单点登录，Bootstrap界面，RESTful构架风格，Netty即时通信，Token口令授权，Web端与客户端通信。
 ### 构建说明
