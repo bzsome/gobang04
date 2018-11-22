@@ -16,15 +16,15 @@
     <!-- 静态资源(js、image等)的访问 -->
     <mvc:default-servlet-handler/>
 
+    <!--跨域设置-->
+    <!--必须要开启注解驱动，否则失效-->
+    <mvc:cors>
+        <mvc:mapping path="/**" allowed-methods="*" allowed-origins="*"/>
+    </mvc:cors>
 
     <!-- 配置拦截器, -->
     <mvc:interceptors>
         <mvc:interceptor>
-            <!-- 具体匹配原则可以百度
-                /**的意思是所有文件夹及里面的子文件夹
-                /*是所有文件夹，不含子文件夹
-                /是web项目的根目录
-            -->
             <mvc:mapping path="/user/user"/>
             <bean class="com.chao.security.AuthorizationInterceptor"></bean>
         </mvc:interceptor>
