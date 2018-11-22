@@ -5,6 +5,8 @@ import com.chao.bean.UserBean;
 import com.chao.security.JWTUtil;
 import com.chao.service.UserService;
 import com.chao.utils.Constants;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Controller;
@@ -18,6 +20,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/user")
 @CrossOrigin(origins = "*", maxAge = 3600)
 public class UserController {
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
     UserService userService;
@@ -25,7 +28,7 @@ public class UserController {
     ControllerTools controllerTools;
 
     @ResponseBody
-    @RequestMapping(value = "/user", method = RequestMethod.GET)
+    @GetMapping(value = "/user")
     public ResponseMessage getUser(@RequestHeader HttpHeaders headers) {
         UserBean user = controllerTools.getUser(headers);
         return ResponseMessage.success().add("user", user);
@@ -39,7 +42,7 @@ public class UserController {
      * @return
      */
     @ResponseBody
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    @PostMapping(value = "/login")
     public ResponseMessage userLogin(String username, String password) {
         UserBean userBean = userService.login(username, password);
         if (userBean == null) {
@@ -56,7 +59,7 @@ public class UserController {
      * @return
      */
     @ResponseBody
-    @RequestMapping(value = "/register", method = RequestMethod.POST)
+    @PostMapping(value = "/register")
     public ResponseMessage userRegister(UserBean user) {
         boolean is = userService.addUser(user);
         if (is) {
@@ -72,7 +75,7 @@ public class UserController {
      * @return
      */
     @ResponseBody
-    @RequestMapping(value = "/logout", method = RequestMethod.GET)
+    @GetMapping(value = "/logout")
     public ResponseMessage logout() {
         try {
             return ResponseMessage.success().add("logout", "退出成功！");
@@ -83,26 +86,19 @@ public class UserController {
 
     /**
      * * 更新用户信息
-     * <p>
-     * 如果直接发送ajax=PUT形式的请求,获取不到数据
-     * * 解决方案；
-     * * 我们要能支持直接发送PUT之类的请求还要封装请求体中的数据
-     * * 1、配置上HttpPutFormContentFilter；
-     * * 2、他的作用；将请求体中的数据解析包装成一个map。
-     * <p>
-     * * 此处需要权限，已过滤用户信息
      *
      * @param user
      * @return
      */
     @ResponseBody
-    @RequestMapping(value = "/user", method = RequestMethod.PUT)
+    @PutMapping(value = "/user")
     public ResponseMessage updateUser(UserBean user, @RequestHeader HttpHeaders headers) {
+        logger.info("更新用户信息：{}", user.toString());
         UserBean olderUser = controllerTools.getUser(headers);
-        user.setUsername(olderUser.getUsername());
-        userService.updateUserByUsername(user);
+        user.setUid(olderUser.getUid());
+        userService.updateUser(user);
         //从数据库中得到更新后的用户信息
-        UserBean newUser = userService.getUserByUsername(user.getUsername());
+        UserBean newUser = userService.getUserByUsername(olderUser.getUsername());
         return new ResponseMessage().success().add("user", newUser);
     }
 }

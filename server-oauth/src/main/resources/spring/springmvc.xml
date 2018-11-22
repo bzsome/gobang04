@@ -7,14 +7,15 @@
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-    <!--指明 controller 所在包，并扫描其中的注解-->
-    <context:component-scan base-package="com.chao.controller"/>
 
     <!-- 开启注解 -->
     <mvc:annotation-driven/>
 
     <!-- 静态资源(js、image等)的访问 -->
     <mvc:default-servlet-handler/>
+
+    <!--指明 controller 所在包，并扫描其中的注解-->
+    <context:component-scan base-package="com.chao.controller"/>
 
     <!--跨域设置-->
     <!--必须要开启注解驱动，否则失效-->
@@ -29,5 +30,15 @@
             <bean class="com.chao.security.AuthorizationInterceptor"></bean>
         </mvc:interceptor>
     </mvc:interceptors>
+
+    <!-- 注解适配器 -->
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+        <property name="messageConverters">
+            <list>
+                <!--能够识别前端发送的json数据，使@RequestBody 生效-->
+                <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>
+            </list>
+        </property>
+    </bean>
 
 </beans>

@@ -4,7 +4,7 @@
  */
 
 //服务器api接口地址
-var oauth_path = "http://gobang04.bzchao.com/oauth";
+var oauth_path = "http://localhost:802/oauth";
 var netty_path = "gobang04.bzchao.com:9901/ws";
 _settings = {
     gobangDown: "http://t.cn/RkEOmDD",

@@ -3,7 +3,6 @@ package com.chao.service;
 import com.chao.bean.UserBean;
 import com.chao.bean.UserBeanExample;
 import com.chao.dao.UserBeanMapper;
-import com.chao.security.AuthorizationInterceptor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -63,18 +62,6 @@ public class UserService {
         }
     }
 
-    /**
-     * 更新用户信息(根据用户名)
-     *
-     * @param user
-     */
-    public boolean updateUserByUsername(UserBean user) {
-        UserBeanExample userExample = new UserBeanExample();
-        UserBeanExample.Criteria criteria = userExample.createCriteria();
-        criteria.andUsernameEqualTo(user.getUsername());
-        int res = userBeanMapper.updateByExampleSelective(user, userExample);
-        return res == 1;
-    }
 
     /**
      * 检查用户名是否存在
@@ -111,5 +98,14 @@ public class UserService {
         } catch (Exception e) {
         }
         return false;
+    }
+
+    /**
+     * 更新用户信息(根据用户名)
+     *
+     * @param user
+     */
+    public void updateUser(UserBean user) {
+        userBeanMapper.updateByPrimaryKeySelective(user);
     }
 }
