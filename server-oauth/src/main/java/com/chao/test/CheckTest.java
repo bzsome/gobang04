@@ -10,7 +10,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import javax.annotation.Resource;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration({"file:src/main/webapp/WEB-INF/applicationContext.xml"})
+@ContextConfiguration({"file:src/main/webapp/WEB-INF/spring-context.xml"})
 public class CheckTest {
     @Resource
     UserService userService;
