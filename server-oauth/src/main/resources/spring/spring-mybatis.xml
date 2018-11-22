@@ -20,8 +20,6 @@
 
     <!--================== 配置和MyBatis的整合=============== -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <!-- 指定mybatis全局配置文件的位置 -->
-        <property name="configLocation" value="classpath:mybatis-config.xml"></property>
         <property name="dataSource" ref="pooledDataSource"></property>
         <!-- 指定mybatis，mapper文件的位置 -->
         <property name="mapperLocations" value="classpath:mapper/*.xml"></property>
