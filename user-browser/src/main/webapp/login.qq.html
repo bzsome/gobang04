@@ -4,14 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Gobang社区-登录</title>
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="http://gobang04.bzchao.com/css/style.css">
+    <link rel="stylesheet" href="http://gobang04.bzchao.com/css/login.css">
 
 </head>
 
@@ -47,8 +46,7 @@
                 <div class="dropdown about-user navbar-right text-center">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <div id="navbar-login">
-                            <a class="navbar-link" href="http://qq.bzchao.com/login.do"><img
-                                    src="img/qq_login.png"></a> /
+                            <a class="navbar-link" href="http://qq.bzchao.com/login.do">QQ登录</a> /
                             <a class="navbar-link" href="login.html">登录</a> /
                             <a class="navbar-link" href="register.html">注册</a>
                         </div>
@@ -76,28 +74,13 @@
     <div class="container">
         <div class="login-box center-block">
             <div class="form-group loginbox-title">
-                <h4>
-                    <span>用户登录</span>
-                    <a class="pull-right" href="http://qq.bzchao.com/login.do">
-                        <img src="img/qq_login.png" width="120%">
-                    </a>
-                </h4>
+                <h4>用户登录 <a class="pull-right" href="http://qq.bzchao.com/login.do">QQ登录</a></h4>
             </div>
             <form class="form-login center-block" id="loginFrom">
 
                 <!--自定义提示框-->
                 <div id="my_alertBox"></div>
-
-                <div class="form-group">
-                    <input name="username" class="form-control" type="text" placeholder="用户名"/>
-                </div>
-                <div class="form-group">
-                    <input name="password" class="form-control" type="password" placeholder="密码"/>
-                </div>
-                <div class="form-group">
-                    <input type="checkbox" name="rememberMe">记住我<br>
-                    <button id="login_btn" class="btn btn-lg btn-primary btn-block">登录</button>
-                </div>
+                <h4>正在跳转至用户中心...</h4>
             </form>
             <div class="login-etc clear">
                 <div class="reg-div pull-left">
@@ -122,14 +105,11 @@
     </div>
 </div>
 
-
-<script type="text/javascript" src="js/jquery/jquery.validate.min.js"></script>
-
-<script type="text/javascript" src="js/tool/cookie.js"></script>
-<script type="text/javascript" src="js/config/config.js"></script>
-<script type="text/javascript" src="js/config/config.ajax.js"></script>
-<script type="text/javascript" src="js/tool/my.tool.js"></script>
-<script type="text/javascript" src="js/user.login.js"></script>
+<script type="text/javascript" src="http://gobang04.bzchao.com/js/tool/cookie.js"></script>
+<script type="text/javascript" src="http://gobang04.bzchao.com/js/config/config.js"></script>
+<script type="text/javascript" src="http://gobang04.bzchao.com/js/config/config.ajax.js"></script>
+<script type="text/javascript" src="http://gobang04.bzchao.com/js/tool/my.tool.js"></script>
+<script type="text/javascript" src="js/user.login.qq.js"></script>
 
 </body>
 
