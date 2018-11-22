@@ -8,4 +8,4 @@ CLASSPATH=$JAVA_HOME/lib/
 PATH=$PATH:$JAVA_HOME/bin
 export PATH JAVA_HOME PATH
 
-nohup java -jar /usr/local/tomcat8/webapps/gobang04-netty.jar >/tmp/gobang04-netty.log &
+nohup java -jar ./gobang04-netty.jar >/tmp/gobang04-netty.log &
